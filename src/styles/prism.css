@@ -1,0 +1,112 @@
+/**
+ * Prism base code highlighter theme using Sass
+ *
+ * @author @MoOx
+ * https://github.com/MoOx/sass-prism-theme-base/blob/master/_prism.scss
+ * slightly adapted by me, Bram de Haan
+ */
+code[class*="language-"], pre[class*="language-"] {
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #EEFFFF;
+    background: #263238;
+}
+
+pre[class*="language-"], :not(pre) > code[class*="language-"] {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+pre[class*="language-"] {
+    padding: 12px;
+    border-radius: 16px;
+}
+
+:not(pre) > code[class*="language-"] {
+    padding: 2px 6px;
+}
+
+code[class*="language-"] .namespace, pre[class*="language-"] .namespace {
+    opacity: .7;
+}
+
+code[class*="language-"] .token.comment, code[class*="language-"] .token.prolog, code[class*="language-"] .token.doctype, code[class*="language-"] .token.cdata, pre[class*="language-"] .token.comment, pre[class*="language-"] .token.prolog, pre[class*="language-"] .token.doctype, pre[class*="language-"] .token.cdata {
+    color: #62727A;
+}
+
+code[class*="language-"] .token.null, code[class*="language-"] .token.operator, code[class*="language-"] .token.boolean, code[class*="language-"] .token.number, pre[class*="language-"] .token.null, pre[class*="language-"] .token.operator, pre[class*="language-"] .token.boolean, pre[class*="language-"] .token.number {
+    color: #F78C6C;
+}
+
+code[class*="language-"] .token.string, pre[class*="language-"] .token.string {
+    color: #89DDFF;
+}
+
+code[class*="language-"] .token.attr-name, pre[class*="language-"] .token.attr-name {
+    color: #F78C6C;
+}
+
+code[class*="language-"] .token.entity, code[class*="language-"] .token.url, .language-css code[class*="language-"] .token.string, .style code[class*="language-"] .token.string, pre[class*="language-"] .token.entity, pre[class*="language-"] .token.url, .language-css pre[class*="language-"] .token.string, .style pre[class*="language-"] .token.string {
+    color: #89DDFF;
+}
+
+code[class*="language-"] .token.selector, pre[class*="language-"] .token.selector {
+    color: #C792EA;
+}
+
+code[class*="language-"] .token.attr-value, code[class*="language-"] .token.keyword, code[class*="language-"] .token.control, code[class*="language-"] .token.directive, code[class*="language-"] .token.unit, pre[class*="language-"] .token.attr-value, pre[class*="language-"] .token.keyword, pre[class*="language-"] .token.control, pre[class*="language-"] .token.directive, pre[class*="language-"] .token.unit {
+    color: #C3E88D;
+}
+
+code[class*="language-"] .token.important, pre[class*="language-"] .token.important {
+    color: #F07178;
+}
+
+code[class*="language-"] .token.atrule, pre[class*="language-"] .token.atrule {
+    color: #89DDFF;
+}
+
+code[class*="language-"] .token.regex, code[class*="language-"] .token.statement, pre[class*="language-"] .token.regex, pre[class*="language-"] .token.statement {
+    color: #89DDFF;
+}
+
+code[class*="language-"] .token.placeholder, code[class*="language-"] .token.variable, pre[class*="language-"] .token.placeholder, pre[class*="language-"] .token.variable {
+    color: #82AAFF;
+}
+
+code[class*="language-"] .token.property, pre[class*="language-"] .token.property {
+    color: #FFCB6B;
+}
+
+code[class*="language-"] .token.tag, pre[class*="language-"] .token.tag {
+    color: #82AAFF;
+}
+
+code[class*="language-"] .token.important, code[class*="language-"] .token.statement, pre[class*="language-"] .token.important, pre[class*="language-"] .token.statement {
+    font-weight: bold;
+}
+
+code[class*="language-"] .token.punctuation, pre[class*="language-"] .token.punctuation {
+    color: #EEFFFF;
+}
+
+code[class*="language-"] .token.entity, pre[class*="language-"] .token.entity {
+    cursor: help;
+}
+
+code[class*="language-"] .token.debug, pre[class*="language-"] .token.debug {
+    color: red;
+}
