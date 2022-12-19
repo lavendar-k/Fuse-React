@@ -3,7 +3,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
-import ChatPanelToggleButton from 'app/fuse-layouts/shared-components/chatPanel/ChatPanelToggleButton';
 import Logo from 'app/fuse-layouts/shared-components/Logo';
 import NavbarToggleButton from 'app/fuse-layouts/shared-components/NavbarToggleButton';
 import QuickPanelToggleButton from 'app/fuse-layouts/shared-components/quickPanel/QuickPanelToggleButton';
@@ -15,7 +14,6 @@ import { selectToolbarTheme } from 'app/store/fuse/settingsSlice';
 import AdjustFontSize from '../../shared-components/AdjustFontSize';
 import FullScreenToggle from '../../shared-components/FullScreenToggle';
 import LanguageSwitcher from '../../shared-components/LanguageSwitcher';
-import NotificationPanelToggleButton from '../../shared-components/notificationPanel/NotificationPanelToggleButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -59,10 +57,6 @@ function ToolbarLayout3(props) {
               <FuseSearch />
             </Hidden>
 
-            <Hidden lgUp>
-              <ChatPanelToggleButton />
-            </Hidden>
-
             <LanguageSwitcher />
 
             <AdjustFontSize />
@@ -70,8 +64,6 @@ function ToolbarLayout3(props) {
             <FullScreenToggle />
 
             <QuickPanelToggleButton />
-
-            <NotificationPanelToggleButton />
 
             <UserMenu />
           </div>

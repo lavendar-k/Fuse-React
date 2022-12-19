@@ -1,28 +1,10 @@
-import FuseUtils from '@fuse/utils';
-import appsConfigs from 'app/main/apps/appsConfigs';
-import authRoleExamplesConfigs from 'app/main/auth/authRoleExamplesConfigs';
-import CallbackConfig from 'app/main/callback/CallbackConfig';
-import DocumentationConfig from 'app/main/documentation/DocumentationConfig';
-import LoginConfig from 'app/main/login/LoginConfig';
-import LogoutConfig from 'app/main/logout/LogoutConfig';
-import pagesConfigs from 'app/main/pages/pagesConfigs';
-import RegisterConfig from 'app/main/register/RegisterConfig';
-import UserInterfaceConfig from 'app/main/user-interface/UserInterfaceConfig';
 import { Redirect } from 'react-router-dom';
+import FuseUtils from '@fuse/utils';
+import ExampleConfig from 'app/main/example/ExampleConfig';
 import FuseLoading from '@fuse/core/FuseLoading';
+import Error404Page from 'app/main/404/Error404Page';
 
-const routeConfigs = [
-  ...appsConfigs,
-  ...pagesConfigs,
-  ...authRoleExamplesConfigs,
-  UserInterfaceConfig,
-  DocumentationConfig,
-  LogoutConfig,
-  LoginConfig,
-  RegisterConfig,
-  LogoutConfig,
-  CallbackConfig,
-];
+const routeConfigs = [ExampleConfig];
 
 const routes = [
   // if you want to make whole app auth protected by default change defaultAuth for example:
@@ -30,9 +12,9 @@ const routes = [
   // The individual route configs which has auth option won't be overridden.
   ...FuseUtils.generateRoutesFromConfigs(routeConfigs, null),
   {
-    path: '/',
     exact: true,
-    component: () => <Redirect to="/apps/dashboards/analytics" />,
+    path: '/',
+    component: () => <Redirect to="/example" />,
   },
   {
     path: '/loading',
@@ -40,7 +22,11 @@ const routes = [
     component: () => <FuseLoading />,
   },
   {
-    component: () => <Redirect to="/pages/errors/error-404" />,
+    path: '/404',
+    component: () => <Error404Page />,
+  },
+  {
+    component: () => <Redirect to="/404" />,
   },
 ];
 
